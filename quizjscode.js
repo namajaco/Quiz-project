@@ -42,6 +42,7 @@ function finish(){
     for (const rb of q1As){
         if (rb.checked){
             q1Value = rb.value;
+            console.log("q1")
             break;
         }
     }
@@ -51,6 +52,7 @@ function finish(){
     for (const rb of q2As){
         if (rb.checked){
             q2Value = rb.value;
+            console.log("q2")
             break;
         }
     }
@@ -60,6 +62,7 @@ function finish(){
     for (const rb of q3As){
         if (rb.checked){
             q3Value = rb.value;
+            console.log("q3")
             break;
         }
     }
@@ -69,6 +72,7 @@ function finish(){
     for (const rb of q4As){
         if (rb.checked){
             q4Value = rb.value;
+            console.log("q4")
             break;
         }
     }
@@ -78,6 +82,7 @@ function finish(){
     for (const rb of q5As){
         if (rb.checked){
             q5Value = rb.value;
+            console.log("q5")
             break;
         }
     }
