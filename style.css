@@ -10,7 +10,26 @@
     left: 0;
 }
 
-/* HIDE RADIO */
+.cat1{background-image: url(cat1.png);}
+
+
+/*
+input[type=radio] {
+    display: none;
+  }
+  
+  img:hover {
+    opacity:0.6;
+    cursor: pointer;
+  }
+  
+  img:active {
+    opacity:0.4;
+    cursor: pointer;
+  }
+
+/*
+ HIDE RADIO 
 [type=radio] { 
     position: absolute;
     opacity: 0;
@@ -18,7 +37,7 @@
     height: 0;
   }
   
-  /* IMAGE STYLES */
+   IMAGE STYLES 
   [type=radio] + img {
     cursor: pointer;
   }
