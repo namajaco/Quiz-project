@@ -86,15 +86,15 @@ function finish(){
     results = total;
 
     if (results == 5){
-        msg = "purrfectly! 😻"
+        msg = "Purrfectly! 😻"
     } else if (results >= 4){
-        msg = "almeowst every time. 😸";
+        msg = "Almeowst every time. 😸";
     } else if (results >= 2 && results < 4){
-        msg = "with some trouble. 😺";
+        msg = "With some trouble. 😺";
     } else if (results == 1){
-        msg = "almost none of the time. 😿";
+        msg = "Almost none of the time. 😿";
     } else {
-        msg = "never! Careful when you eat croissants! 🙀"
+        msg = "Never! Be careful when you eat croissants! 🙀"
     }
 
     document.getElementById("results").innerHTML = msg

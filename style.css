@@ -1,0 +1,7 @@
+.container{
+    background-color: gray;
+    display: block;
+    position: static;
+    text-align: center;
+    padding: 10rem;
+}
