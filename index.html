@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--css here-->
+    <title>Quiz</title>
+</head>
+
+<body onload="begin()">
+    <div class="container">
+        <div id="titleBox">
+            <header>
+                <div id="quizTitle">
+                    <h1>🐈 Cat or croissant? 🥐</h1>
+                    <br>
+                    <p><b>Can you tell the difference?</b></p>
+                    <br>
+                    <input type="button" value="Begin" onClick="q1()"/>
+                </div>
+            </header>
+        </div>
+
+        <div id="quizBox">
+            <form name="myQuiz">
+
+                <div id="q1">
+                    <div id="q1Title">
+                        <h1>1</h1>
+                        <br>
+                        <p><b>Pick the cat </b>🐈</p>
+                    </div>
+                    <br>
+                    <fieldset>
+                    <lable for="q1AnswerA"><input name="q1Answers" value=0 type="radio" onClick="q2()"/>Answer A</label>
+                    <label for="q1AnswerB"><input name="q1Answers" value=1 type="radio" onClick="q2()"/>Answer B</label>
+                    <label for="q1AnswerC"><input name="q1Answers" value=0 type="radio" onClick="q2()"/>Answer C</label>
+                    </fieldset>
+                </div>
+
+
+                <div id="q2">
+                    <div id="q2Title">
+                        <h1>2</h1>
+                        <br>
+                        <p><b>Pick the croissant </b>🥐</p>
+                    </div>
+                    <br>
+                    <fieldset>
+                    <label for="q2AnswerA"><input name="q2Answers" value=0 type="radio" onClick="q3()"/>Answer A</label>
+                    <label for="q2AnswerB"><input name="q2Answers" value=0 type="radio" onClick="q3()"/>Answer B</label>
+                    <label for="q2AnswerC"><input name="q2Answers" value=1 type="radio" onClick="q3()"/>Answer C</label>
+                    </fieldset>
+                </div>
+
+                <div id="q3">
+                    <div id="q3Title">
+                        <h1>3</h1>
+                        <br>
+                        <p><b>Pick the cat </b>🐈</p>
+                    </div>
+                    <br>
+                    <fieldset>
+                    <label for="q3AnswerA"><input name="q3Answers" value=0 type="radio" onClick="q4()"/>Answer A</label>
+                    <label for="q3AnswerB"><input name="q3Answers" value=1 type="radio" onClick="q4()"/>Answer B</label>
+                    <label for="q3AnswerC"><input name="q3Answers" value=0 type="radio" onClick="q4()"/>Answer C</label>
+                    </fieldset>
+                </div>
+
+                <div id="q4">
+                    <div id="q4Title">
+                        <h1>4</h1>
+                        <br>
+                        <p><b>Pick the cat </b>🐈</p>
+                    </div>
+                    <br>
+                    <fieldset>
+                    <label for="q4AnswerA"><input name="q4Answers" value=1 type="radio" onClick="q5()"/>Answer A</label>
+                    <label for="q4AnswerB"><input name="q4Answers" value=0 type="radio" onClick="q5()"/>Answer B</label>
+                    <label for="q4AnswerC"><input name="q4Answers" value=0 type="radio" onClick="q5()"/>Answer C</label>
+                    </fieldset>
+                </div>
+                
+                <div id="q5">
+                    <div id="q5Title">
+                        <h1>5</h1>
+                        <br>
+                        <p><b>Pick the croissant </b>🥐</p>
+                    </div>
+                    <br>
+                    <fieldset>
+                    <label for="q5AnswerA"><input name="q5Answers" value=0 type="radio" onClick="finish()"/>Answer A</label>
+                    <label for="q5AnswerB"><input name="q5Answers" value=0 type="radio" onClick="finish()"/>Answer B</label>
+                    <label for="q5AnswerC"><input name="q5Answers" value=1 type="radio" onClick="finish()"/>Answer C</label>
+                    </fieldset>
+                </div>
+
+                <div id="finish">
+                    <div id="resultTitle">
+                        <h1>Your Result</h1>
+                        <br>
+                        <p><b>You can tell the difference between a cat and croissant...</b></p>
+                        <p id="results"></p>
+                    </div>
+                    <br>
+                    <input type="button" value="Try Again" onClick="refreshPage()"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="quizjscode.js"></script>
+</body>
+
+</html>
