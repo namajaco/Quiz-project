@@ -11,106 +11,117 @@
 </head>
 
 <body onload="begin()">
-    <div class="container">
+    <div class="container-fluid">
         <div id="titleBox">
             <header>
-                <div id="quizTitle">
-                    <h1>🐈 Cat or Croissant? 🥐</h1>
-                    <br>
-                    <p><b>Can you tell the difference?</b></p>
-                    <br>
-                    <input type="button" value="Begin" onClick="q1()"/>
+                <div class="row">
+                    <div class="col-1">
+                        <div id="quizTitle" class="text-center">
+                            <h1 id="introTitle">🐈 Cat or Croissant? 🥐</h1>
+                            <br><br><br><br><br><br>
+                            <p>Can you tell the difference?</p>
+                            <br><br><br><br><br><br>
+                            <input type="button" class="btn btn-warning btn-lg" value="Begin" onClick="q1()"/>
+                        </div>
+                    </div>
                 </div>
             </header>
         </div>
+        <div class="row">
+            <div class="col-1>">
+                <div id="quizBox" class="text-center">
+                    <form name="myQuiz">
 
-        <div id="quizBox">
-            <form name="myQuiz">
+                        <div id="q1">
+                            <div id="q1Title">
+                                <h1>1</h1>
+                                <br>
+                                <p>Pick the cat</p>
+                                <p>🐈</p>
+                            </div>
+                            <br>
+                            <fieldset>
+                                <lable for="q1AnswerA"><input name="q1Answers" value=0 type="radio" onClick="q2()"/><img src="img/croissant1a.png"></label>
+                                <label for="q1AnswerB"><input name="q1Answers" value=1 type="radio" onClick="q2()"/><img src="img/cat1.png"></label>
+                                <label for="q1AnswerC"><input name="q1Answers" value=0 type="radio" onClick="q2()"/><img src="img/croissant1b.png"></label>
+                            </fieldset>
+                        </div>
 
-                <div id="q1">
-                    <div id="q1Title">
-                        <h1>1</h1>
-                        <br>
-                        <p>Pick the cat 🐈</p>
-                    </div>
-                    <br>
-                    <fieldset>
-                        <lable for="q1AnswerA"><input name="q1Answers" value=0 type="radio" onClick="q2()"/><img src="img/croissant1a.png"></label>
-                        <label for="q1AnswerB"><input name="q1Answers" value=1 type="radio" onClick="q2()"/><img src="img/cat1.png"></label>
-                        <label for="q1AnswerC"><input name="q1Answers" value=0 type="radio" onClick="q2()"/><img src="img/croissant1b.png"></label>
-                    </fieldset>
+
+                        <div id="q2">
+                            <div id="q2Title">
+                                <h1>2</h1>
+                                <br>
+                                <p>Pick the croissant</p>
+                                <p>🥐</p>
+                            </div>
+                            <br>
+                            <fieldset>
+                                <label for="q2AnswerA"><input name="q2Answers" value=0 type="radio" onClick="q3()"/><img src="img/cat2a.png"></label>
+                                <label for="q2AnswerB"><input name="q2Answers" value=0 type="radio" onClick="q3()"/><img src="img/cat2b.png"></label>
+                                <label for="q2AnswerC"><input name="q2Answers" value=1 type="radio" onClick="q3()"/><img src="img/croissant2.png"></label>
+                            </fieldset>
+                        </div>
+
+                        <div id="q3">
+                            <div id="q3Title">
+                                <h1>3</h1>
+                                <br>
+                                <p>Pick the cat</p>
+                                <p>🐈</p>
+                            </div>
+                            <br>
+                            <fieldset>
+                                <label for="q3AnswerA"><input name="q3Answers" value=0 type="radio" onClick="q4()"/><img src="img/croissant3a.png"></label>
+                                <label for="q3AnswerB"><input name="q3Answers" value=1 type="radio" onClick="q4()"/><img src="img/cat3.png"></label>
+                                <label for="q3AnswerC"><input name="q3Answers" value=0 type="radio" onClick="q4()"/><img src="img/croissant3b.png"></label>
+                            </fieldset>
+                        </div>
+
+                        <div id="q4">
+                            <div id="q4Title">
+                                <h1>4</h1>
+                                <br>
+                                <p>Pick the cat</p>
+                                <p>🐈</p>
+                            </div>
+                            <br>
+                            <fieldset>
+                                <label for="q4AnswerA"><input name="q4Answers" value=1 type="radio" onClick="q5()"/><img src="img/cat4.png"></label>
+                                <label for="q4AnswerB"><input name="q4Answers" value=0 type="radio" onClick="q5()"/><img src="img/croissant4b.png"></label>
+                                <label for="q4AnswerC"><input name="q4Answers" value=0 type="radio" onClick="q5()"/><img src="img/croissant4a.png"></label>
+                            </fieldset>
+                        </div>
+                        
+                        <div id="q5">
+                            <div id="q5Title">
+                                <h1>5</h1>
+                                <br>
+                                <p>Pick the croissant</p>
+                                <p>🥐</p>
+                            </div>
+                            <br>
+                            <fieldset>
+                                <label for="q5AnswerA"><input name="q5Answers" value=0 type="radio" onClick="finish()"/><img src="img/cat5a.png"></label>
+                                <label for="q5AnswerB"><input name="q5Answers" value=0 type="radio" onClick="finish()"/><img src="img/cat5b.png"></label>
+                                <label for="q5AnswerC"><input name="q5Answers" value=1 type="radio" onClick="finish()"/><img src="img/croissant5.png"></label>
+                            </fieldset>
+                        </div>
+
+                        <div id="finish">
+                            <div id="resultTitle">
+                                <h1>You can tell the difference between a cat and croissant...</h1>
+                                <br><br><br><br>
+                                <p id="results"></p>
+                            </div>
+                            <br><br><br><br>
+                            <input type="button" class="btn btn-warning btn-lg" value="Try Again" onClick="refreshPage()"/>
+                        </div>
+                    </form>
                 </div>
-
-
-                <div id="q2">
-                    <div id="q2Title">
-                        <h1>2</h1>
-                        <br>
-                        <p>Pick the croissant 🥐</p>
-                    </div>
-                    <br>
-                    <fieldset>
-                        <label for="q2AnswerA"><input name="q2Answers" value=0 type="radio" onClick="q3()"/><img src="img/cat2a.png"></label>
-                        <label for="q2AnswerB"><input name="q2Answers" value=0 type="radio" onClick="q3()"/><img src="img/cat2b.png"></label>
-                        <label for="q2AnswerC"><input name="q2Answers" value=1 type="radio" onClick="q3()"/><img src="img/croissant2.png"></label>
-                    </fieldset>
-                </div>
-
-                <div id="q3">
-                    <div id="q3Title">
-                        <h1>3</h1>
-                        <br>
-                        <p>Pick the cat 🐈</p>
-                    </div>
-                    <br>
-                    <fieldset>
-                        <label for="q3AnswerA"><input name="q3Answers" value=0 type="radio" onClick="q4()"/><img src="img/croissant3a.png"></label>
-                        <label for="q3AnswerB"><input name="q3Answers" value=1 type="radio" onClick="q4()"/><img src="img/cat3.png"></label>
-                        <label for="q3AnswerC"><input name="q3Answers" value=0 type="radio" onClick="q4()"/><img src="img/croissant3b.png"></label>
-                    </fieldset>
-                </div>
-
-                <div id="q4">
-                    <div id="q4Title">
-                        <h1>4</h1>
-                        <br>
-                        <p>Pick the cat 🐈</p>
-                    </div>
-                    <br>
-                    <fieldset>
-                        <label for="q4AnswerA"><input name="q4Answers" value=1 type="radio" onClick="q5()"/><img src="img/cat4.png"></label>
-                        <label for="q4AnswerB"><input name="q4Answers" value=0 type="radio" onClick="q5()"/><img src="img/croissant4b.png"></label>
-                        <label for="q4AnswerC"><input name="q4Answers" value=0 type="radio" onClick="q5()"/><img src="img/croissant4a.png"></label>
-                    </fieldset>
-                </div>
-                
-                <div id="q5">
-                    <div id="q5Title">
-                        <h1>5</h1>
-                        <br>
-                        <p>Pick the croissant 🥐</p>
-                    </div>
-                    <br>
-                    <fieldset>
-                        <label for="q5AnswerA"><input name="q5Answers" value=0 type="radio" onClick="finish()"/><img src="img/cat5a.png"></label>
-                        <label for="q5AnswerB"><input name="q5Answers" value=0 type="radio" onClick="finish()"/><img src="img/cat5b.png"></label>
-                        <label for="q5AnswerC"><input name="q5Answers" value=1 type="radio" onClick="finish()"/><img src="img/croissant5.png"></label>
-                    </fieldset>
-                </div>
-
-                <div id="finish">
-                    <div id="resultTitle">
-                        <h1>You can tell the difference between a cat and croissant...</h1>
-                        <br>
-                        <p id="results"></p>
-                    </div>
-                    <br>
-                    <input type="button" value="Try Again" onClick="refreshPage()"/>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
-
     <script src="quizjscode.js"></script>
 </body>
 
